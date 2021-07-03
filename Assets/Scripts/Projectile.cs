@@ -5,6 +5,7 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     [SerializeField] private float speed;
+    [SerializeField] private float damage;
 
     private IEnumerator projectileCoroutine;
 
@@ -35,7 +36,7 @@ public class Projectile : MonoBehaviour
     {
         if(collision.CompareTag(Tags.Enemy.ToString()))
         {
-            Destroy(collision.gameObject);
+            collision.GetComponent<Entity>().ReceiveHit(damage);
             gameObject.SetActive(false);
         }
     }
