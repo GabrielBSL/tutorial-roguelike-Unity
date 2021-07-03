@@ -17,18 +17,6 @@ public class PlayerAnimation : Player
         FacingDown
     }
 
-    private enum AnimNames
-    {
-        WalkingRight,
-        WalkingLeft,
-        WalkingUp,
-        WalkingDown,
-        IdleRight,
-        IdleLeft,
-        IdleUp,
-        IdleDown
-    }
-
     private FacingDirection m_FacingDirection;
 
     // Start is called before the first frame update
